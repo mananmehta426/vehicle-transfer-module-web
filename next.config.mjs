@@ -2,7 +2,7 @@ import { config } from 'dotenv';
 config();
 
 const nextConfig = {
-  reactStrictMode: false,
+  reactStrictMode: true,
   env: {
     APP_BASE_URL: process.env.APP_BASE_URL,
     APP_BACKEND_BASE_URL: process.env.APP_BACKEND_BASE_URL,
