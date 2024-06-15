@@ -1,25 +1,37 @@
-import {
-  Button,
-  Space,
-  Divider,
-} from 'antd';
+import Link from 'next/link';
+import { Button, Space, Divider } from 'antd';
 
-const Home = function Home() {
+const Home = () => {
   return (
     <>
       <section style={{ textAlign: 'center', marginTop: 48, marginBottom: 40, padding: 100 }}>
         <Space align='start'>
-          <img
-            style={{ width: 40, height: 40 }}
-            src='https://gw.alipayobjects.com/zos/rmsportal/KDpgvguMpGfqaHPjicRK.svg'
-            alt='Ant Design'
-          />
           <h2 style={{ marginBottom: 0 }}>
-            Ant Design (Without Sub Components)
+            Vehicle Transfer Module
           </h2>
         </Space>
-        <Divider style={{ marginBottom: 60 }}>Divider</Divider>
-        <Button type='primary' block href='/with-sub-components'>With Sub Components</Button>
+        <Divider style={{ marginBottom: 60 }}></Divider>
+        <div style={{ marginBottom: '16px' }}>
+          <Link href='/drivers'>
+            <Button type='primary' block>
+              Drivers
+            </Button>
+          </Link>
+        </div>
+        <div style={{ marginBottom: '16px' }}>
+          <Link href='/vehicles'>
+            <Button type='primary' block>
+              Vehicles
+            </Button>
+          </Link>
+        </div>
+        <div>
+          <Link href='/transfers'>
+            <Button type='primary' block>
+              Transfers
+            </Button>
+          </Link>
+        </div>
       </section>
     </>
   );
